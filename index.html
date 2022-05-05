@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doe sangue! Doe vida!</title>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!--Conteúdo do Topo-->
+      <img class="logo" src="/public/logo.png" alt="Imagem de DOE" />
+      <!-- As vezes se o navegador não carregar a imagem, é necessário colocar uma barra antes do arquivo indicando que está na pasta raiz-->
+      <h2>A sua doação importa</h2>
+      <p>Até 3 vidas com 1 doação</p>
+      <p>Mais de 38.000 doações</p>
+      <p>Apenas 1,9% da população brasileira doa sangue.</p>
+      <button>Quero ajudar</button>
+    </header>
+
+    <section class="form hide">
+      <h2>Entre na lista de doadores.</h2>
+      <form action="/" method="POST">
+        <!-- Na criação do formulário é criada uma ação '/' raiz e inserido
+            o método POST, para a captura dos dados para o servidor post criado após o GET. Poderia ser 
+            utilizado o GET, ams para deixar tudo funcionando separado foi criado o POST. Todo formulário HTML
+        ou terá um método POST(registrar, guardar dados) ou um método GET(pegar, mostrar,servir alguma coisa)-->
+
+        <input type="text" name="nome" placeholder="Nome Completo" />
+
+        <input type="text" name="email" placeholder="Email" />
+
+        <input type="text" name="sangue" placeholder="Tipo Sanguíneo" />
+
+        <button>Quero ajudar</button>
+        <!-- Toda vez que eu clicar no botão, automaticamente ele vai acionar
+            o POST do formulário, e ele vai procurar no nosso servidor se eu tenho o verbo POST-->
+      </form>
+    </section>
+
+    <main>
+      <!--Contéudo Central-->
+      <h2>Últimos <span>doadores</span></h2>
+
+      <!-- <section class="doadores"> -->
+        <!--Essa parte vai passar em branco, já que no servidor ele vai puxar do banco de dados,e na parte da configuração da página
+            ele foi colocado como uma variável com uma array vazia, fazendo com que o programa passe direto. Não foi apagado para
+            não dar erro na aplicação. A estratégia é verificar se o banco de dados de doadores está rodando direito, e
+            verificar se tem algum erro.-->
+        <!-- {% for doador in doadores%} -->
+        <!-- Enquanto tiver doador para doadores, repete essa estrutura de html-->
+
+        <!-- <div class="doador">
+          <div class="sangue">{{doador.sangue}}</div> -->
+          <!--Objetos capturando o sangue e o nome do js-->
+          <!-- <p>{{doador.name}}</p>
+        </div>
+        {%endfor%} -->
+        <!-- finalizando a estrutura de repetição-->
+
+        <!-- FOI TROCADO PELA FORMA DE ESTRUTURA DE REPETIÇÃO ACIMA, TORNANDO MAIS FÁCIL JÁ QUE NÃO SE SABE
+                A QUANTIDADE DE DOADORES E NÃO SE PERDE TEMPO ADICIONANDO UM POR UM. 
+                Ele vai repetir o html de doadores(que é a div doador) toda vez que tiver um doador.
+                {% for doador in doadores %} {% endfor %}
+
+                <div class="doador">
+                <div class="sangue">O+</div>
+                    <p>Victor Otoch</p>
+            </div>
+            <div class="doador">
+                <div class="sangue">A+</div>
+                    <p>Luísa Otoch</p>
+            </div>
+            <div class="doador">
+                <div class="sangue">O+</div>
+                    <p>Luciana Otoch</p>
+            </div> -->
+      <!-- </section> -->
+    </main>
+
+    <footer>
+      <!--Rodapé-->
+      <p>💾 Ronaldo Cysne</p>
+    </footer>
+
+    <script src="/public/scripts.js"></script>
+  </body>
+</html>

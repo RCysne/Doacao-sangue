@@ -1,0 +1,246 @@
+/* GLOBAL */
+
+
+/* Aplicando a correção dos limites da borda em todo o código */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;   /* Zerando a margem padrão que é colocada automaticamente. */
+    }
+
+h1, h2 {
+    color: #000000cc;
+}
+
+.logo {
+    width: 120px;
+    margin: 70px 0;
+}
+
+header p {
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /* (VH é viewport height) - Como se fosse 100% da altura
+    Viewport - Tudo o que se vê na tela na parte do browser.
+    Height - é a altura. */
+
+    /* Fonte adicionada pelo google fonts e adicionado no head o link */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    background-color: #f9f9f9;
+    }
+
+
+/* TÍTULOS */
+
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+/* Alterando a cor da palavra DOADORES no main, utilizando a tag span */
+main h2 span {
+    color: #ff4f4f;
+}
+
+.form h2 {
+    text-align: right;
+    color: #ffffffee; /* RGB #ffffff(nível total de todas as cores do RGB - Red, Green e Blue), 
+    Hexadecimal (de 0 a F) e após os 6 caracteres vem a transparência, onde o 0 é a transparência
+    total e o F é totalmente sem transparência. */
+    font-size: 18px;
+}
+
+
+/* ESTRUTURAS */
+
+
+header, main, footer {
+    text-align: center;
+    /* poderia ser esse espaçamento, mas vou utilizar o grid-gap na Section.Form como novo teste
+    margin-right: 50px; */
+}
+
+header, .form, main {
+    /* espaçamentos com margin 
+    margin-bottom: 70px; */
+    margin: 0 auto 70px;
+    /* Aqui em cima utilizei uma margem agrupada. Segue em sentido horário e se não repetir a posição
+    fica subentendido que o valor da relativa se repete.     Ex. margin; 0 auto 70px auto */
+
+
+    /* Limites dos elementos na página - aumentando 90% de ocupação da página, sempre se adaptando */
+    width: 90%;
+    max-width: 500px; /* Um limite para quando atingir os 90% se passa a usar os 500px como limite */
+    
+    /* Aplicando as margens para que nas áreas selecionadas acima, fiquem com as margens alinhadas. 
+    Aplicando dos dois lados para que o conteúdo não fique de um lado 
+    margin-left: auto;
+    margin-right: auto; */
+                    }
+
+/* HEADER */
+header button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff4f4f;
+    color: white;
+
+    font-weight: bold;
+    border: none;
+    
+}
+
+/* FORM */
+
+section.form {
+    /* O grid permite muitas alterações. Aqui em baixo ele permitiu separar em colunas, fazer espaçamentos
+    e alinhamento*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px; /* Espaçamento do GRID */
+    align-items: center; /* Alinhamento dos itens no grid na FORM */
+
+    background-color: #ff4f4f;
+    padding: 16px 64px;
+    border-radius: 6px;
+}
+
+form input,
+form button {
+
+    /* LARGURA */
+    width: 100%;
+
+    /* ESPAÇAMENTOS */
+    margin-bottom: 4px; /* separação entre os inputs */
+
+    /* PREENCHIMENTO */
+
+    /* Agrupando os paddings */
+    padding: 8px 16px; /* preenchimento dos botões aumentando eles, até deixando desalinhado pois é um comportamento
+    herdado do browser. Ele soma os PXs a largura dos 100%. Ex 100% de largura + os PXs 
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    */
+
+    /* CORRIGINDO O COMPORTAMENTO PADRÃO CSS */
+    box-sizing:border-box; /* Corrige o erro de baixo conservando a largura exigida no comando
+    width. Manda respeitar a borda. Mantendo a largura e esquecendo o comportamento padrão*/
+
+    /* BORDAS */
+    
+    border-radius: 4px; 
+    /* Arredondamento das bordas, mas com esse comando ele deixou o espaço como se fosse profundo. 
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    */
+
+    /* características da borda */
+    border: 1px red solid; /* largura da linha, cor e características */
+    border: 1px #ffffff88 solid;
+            }
+
+    form input {
+        background-color: transparent;
+    }
+    /* Pegando o placeholder (seletor pseudo element) dentro do input. Usa-se :: entre os elementos */
+    form input::placeholder {
+        color: #ffffffaa;
+    }
+
+    form button {
+        font-weight: bold;
+    }
+
+/* MAIN */
+
+main .doadores { 
+    /* Famosa cascata, onde o o doadores vai ser pegue de dentro do main. Se houvesse outra classe
+    com o mesmo nome, ele só pegaria a que estava dentro do main */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.doadores p {
+    margin-top: 24px;
+    font-size: 14px;
+    margin-bottom: 64px;
+}
+
+.sangue {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+/* criando a posição relativa para a classe SANGUE, a posição do elemento absoluta, só se
+movimenta dentro da classe. Ela fica absoluta dentro da relativa. Porque se fosse somente a
+absoluta embaixo, ele se movimentaria sobre a a página como um todo. */ 
+    position: relative;
+    
+
+}
+
+/* GOTAS 
+Para criar a gota, se cria um pseudo elemento com os ::, mas é necessário ter o "Content".
+Ele é como se fosse um elemento HTML criado pelo CSS para que se possa fazer estilizações.
+O display flex em cima me mostra esse elemento */
+.sangue::before {
+    content: "";
+    background-color: #ff4f4f11;
+
+    /* quadrado perfeito - 40 por 40. Isso influencia na hora do border-radius, torna ele um círculo
+    perfeito */
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+/* fazer a gotinha no CSS */
+    border-radius: 50%; /* cria o círculo */
+    border-top-right-radius: 0%; /* retorna a ponta do lado direito do quadrado, deixando o círculo
+    com a pontinha */
+
+    transform: rotate(-45deg); /* Essa propriedade faz diversas ideias de transformação. Aqui rotacionamos
+    em menos 45 graus (degrees), para levar a ponta do quadrado para cima, deixando com o aspecto de uma gota. */
+
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: auto;
+    padding-bottom: 16px;
+
+    border: 1px solid #eee
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/* FUNCIONALIDADES COM JAVASCRIPT */
+section.form {
+    transition: all 200ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -60px;
+}
