@@ -170,7 +170,7 @@ main .doadores {
     /* Famosa cascata, onde o o doadores vai ser pegue de dentro do main. Se houvesse outra classe
     com o mesmo nome, ele só pegaria a que estava dentro do main */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .doadores p {

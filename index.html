@@ -44,10 +44,28 @@
     </section>
 
     <main>
-      <!--Contéudo Central-->
+
+      <!--Conteúdo Central-->
+
       <h2>Últimos <span>doadores</span></h2>
 
-      <!-- <section class="doadores"> -->
+      <section class="doadores">
+
+        <div class="doador">
+          <div class="sangue">O+</div>
+            <p>José da Silva</p>
+        </div>
+  
+        <div class="doador">
+          <div class="sangue">A+</div>
+            <p>Maria Fernandes</p>
+        </div>
+  
+        <div class="doador">
+          <div class="sangue">O+</div>
+            <p>Raimundo Antônio</p>
+          </div>
+
         <!--Essa parte vai passar em branco, já que no servidor ele vai puxar do banco de dados,e na parte da configuração da página
             ele foi colocado como uma variável com uma array vazia, fazendo com que o programa passe direto. Não foi apagado para
             não dar erro na aplicação. A estratégia é verificar se o banco de dados de doadores está rodando direito, e
@@ -59,28 +77,16 @@
           <div class="sangue">{{doador.sangue}}</div> -->
           <!--Objetos capturando o sangue e o nome do js-->
           <!-- <p>{{doador.name}}</p>
-        </div>
-        {%endfor%} -->
+        </div> -->
+        <!-- {%endfor%} -->
         <!-- finalizando a estrutura de repetição-->
 
         <!-- FOI TROCADO PELA FORMA DE ESTRUTURA DE REPETIÇÃO ACIMA, TORNANDO MAIS FÁCIL JÁ QUE NÃO SE SABE
-                A QUANTIDADE DE DOADORES E NÃO SE PERDE TEMPO ADICIONANDO UM POR UM. 
-                Ele vai repetir o html de doadores(que é a div doador) toda vez que tiver um doador.
-                {% for doador in doadores %} {% endfor %}
+        A QUANTIDADE DE DOADORES E NÃO SE PERDE TEMPO ADICIONANDO UM POR UM. 
+        Ele vai repetir o html de doadores(que é a div doador) toda vez que tiver um doador.
+        {% for doador in doadores %} {% endfor %} -->
 
-                <div class="doador">
-                <div class="sangue">O+</div>
-                    <p>Victor Otoch</p>
-            </div>
-            <div class="doador">
-                <div class="sangue">A+</div>
-                    <p>Luísa Otoch</p>
-            </div>
-            <div class="doador">
-                <div class="sangue">O+</div>
-                    <p>Luciana Otoch</p>
-            </div> -->
-      <!-- </section> -->
+      </section>
     </main>
 
     <footer>
