@@ -49,21 +49,17 @@ agora vem dele, essa lista de doadores ficou obsoleta
 
 const doadores = [
     {
-        nome: 'Ronaldo Cysne',
+        nome: 'X',
         sangue: 'A+'
     },
     {
-        nome: 'Victor Otoch',
+        nome: 'Y',
         sangue: 'O+'
     },
     {
-        nome: 'Luísa Otoch',
+        nome: 'Z',
         sangue: 'A+'
     },
-    {
-        nome: 'Luciana Otoch',
-        sangue: 'O+'
-    }
 ] */
 
 
